@@ -1,0 +1,68 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Frost Scripter's trolling hub", "Ocean")
+
+--MAIN
+local Main = Window:NewTab("Main")
+local YieldSection = Main:NewSection("Infinite Yield")
+local DexSection = Main:NewSection("Dark Dex")
+
+YieldSection:NewButton("Infinite Yield", "FE admin script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+end)
+
+
+YieldSection:NewButton("Dark Dex", "roblox explorer", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+
+    --SPEED AND JUMP
+local ScriptSection = Main:NewSection("Speed/Jump scripts")
+
+
+ScriptSection:NewToggle("Superhuman", "walkspeed/jump", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+
+ScriptSection:NewSlider("Walkspeed", "SPEED!!", 500, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+ScriptSection:NewSlider("Jumppower", "JUMP HIGH!!", 350, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+ScriptSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+
+
+    --Other
+    local Other = Window:NewTab("Other")
+    local OtherSection = Other:NewSection("Other")
+
+    OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+    end)
+
+    OtherSection:NewButton("Bypassed Fly", "bird mode", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
+
+        Fly(true)
+    end)
+
+        --LOCAL PLAYER
+        local Player = Window:NewTab("Player")
+        local PlayerSection = Player:NewSection("Player")
+    
+        PlayerSection:NewButton("Sapphire Gaze", "changes your face to sapphire gaze (CLIENT SIDE)", function()
+            print("This woman really wanted sapphire gaze. What a barbie.💀")
+            game.Workspace.FrostScripterr.Head.face.Texture = 'http://www.roblox.com/asset/?id=1315942144'
+        end)
