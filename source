@@ -7,12 +7,12 @@ local YieldSection = Main:NewSection("Infinite Yield")
 local DexSection = Main:NewSection("Dark Dex")
 
 YieldSection:NewButton("Infinite Yield", "FE admin script", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
 
 DexSection:NewButton("Dark Dex", "roblox explorer", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
 end)
 
 
