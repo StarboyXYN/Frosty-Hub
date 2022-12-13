@@ -11,7 +11,7 @@ YieldSection:NewButton("Infinite Yield", "FE admin script", function()
 end)
 
 
-YieldSection:NewButton("Dark Dex", "roblox explorer", function()
+DexSection:NewButton("Dark Dex", "roblox explorer", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
