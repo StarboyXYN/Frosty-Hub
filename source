@@ -63,6 +63,6 @@ end)
         local PlayerSection = Player:NewSection("Player")
     
         PlayerSection:NewButton("Sapphire Gaze", "changes your face to sapphire gaze (CLIENT SIDE)", function()
-            print("This woman really wanted sapphire gaze. What a barbie.💀")
+            print("Frost Scripter really wanted sapphire gaze again. What a barbie.💀")
             game.Workspace.FrostScripterr.Head.face.Texture = 'http://www.roblox.com/asset/?id=1315942144'
         end)
