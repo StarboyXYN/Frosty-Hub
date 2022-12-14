@@ -77,12 +77,12 @@ end)
         PlayerSection:NewButton("Hat Giver", "put a hst id in then spawn it", function()
 --Hat Giver Script
 --//HatName//--
-NameHat = "HatNameHere" --[[Dark Dex:
+NameHat = "Meshes/collar30 (2)Accessory" --[[Dark Dex:
 loadstring(game:HttpGet("https://pastebin.com/raw/LiT0AivK",true))()
 ]]
 --//MeshPart & Texture//--
-MeshID = "rbxassetid://IDHere" --https://www.roblox.com/games/7496952739
-TextureId = "rbxassetid://IDHere" --https://www.roblox.com/games/7496952739
+MeshID = "rbxassetid://rbxassetid://7039409293" --https://www.roblox.com/games/7496952739
+TextureId = "rbxassetid://rbxassetid://7039409341" --https://www.roblox.com/games/7496952739
 --//3D//--
 Position = PastePositionHere
 Orientation = PasteOrientationHere
