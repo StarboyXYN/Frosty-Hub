@@ -7,12 +7,12 @@ local YieldSection = Main:NewSection("Infinite Yield")
 local DexSection = Main:NewSection("Dark Dex")
 
 YieldSection:NewButton("Infinite Yield", "FE admin script", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
 end)
 
 
-DexSection:NewButton("Dark Dex", "roblox explorer", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+YieldSection:NewButton("Dark Dex", "roblox explorer", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
 
@@ -58,6 +58,12 @@ end)
         Fly(true)
     end)
 
+    OtherSection:NewButton("", "bird mode", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
+
+        Fly(true)
+    end)
+
         --LOCAL PLAYER
         local Player = Window:NewTab("Player")
         local PlayerSection = Player:NewSection("Player")
@@ -65,4 +71,144 @@ end)
         PlayerSection:NewButton("Sapphire Gaze", "changes your face to sapphire gaze (CLIENT SIDE)", function()
             print("Frost Scripter really wanted sapphire gaze again. What a barbie.💀")
             game.Workspace.FrostScripterr.Head.face.Texture = 'http://www.roblox.com/asset/?id=1315942144'
+        end)
+
+
+        PlayerSection:NewButton("Oversized collar", "for people who want to have a collar around their neck", function()
+            print("FURRY DETECTED FURRY DETECTED!!!")
+            local hatname = "Meshes/collar30 (2)Accessory"
+            local victimname = "FrostScripterr"
+            
+            local plrs = game:GetService("Players")
+            local plr = plrs.LocalPlayer
+            local hat = plr.Character:FindFirstChild(hatname)
+            
+            local hatc = hat:Clone()
+            hatc.Parent = plr.Character
+            local bp = Instance.new("BodyPosition", hat.Handle)
+            local victim = plrs:FindFirstChild(victimname)
+            local heartbeat = game:GetService("RunService").Heartbeat
+            
+            hat.Handle.AccessoryWeld:Destroy()
+            hatc.Handle.Transparency = 1
+            
+            spawn(function()
+                plrs.PlayerAdded:Connect(function(player)
+                    player.MaximumSimulationRadius = 0.1;
+                    sethiddenproperty(player, "SimulationRadius", 0);
+                end)
+                
+                for _,player in pairs(plrs:GetPlayers()) do
+                    if player ~= plr then
+                        player.MaximumSimulationRadius = 0.1;
+                        sethiddenproperty(player, "SimulationRadius", 0);
+                    end
+                end
+                
+                while true do
+                    heartbeat:Wait();
+                    settings().Physics.AllowSleep = false;
+                    plr.MaximumSimulationRadius = math.huge;
+                    if setsimulationradius then
+                        setsimulationradius(math.huge);
+                    else
+                        sethiddenproperty(plr, "SimulationRadius", math.huge);
+                    end
+                end
+            end)
+            
+            local function weld(attachment0, attachment1, part0)
+                local weldpos = Instance.new("AlignPosition", part0)
+                weldpos.Attachment0 = attachment0
+                weldpos.Attachment1 = attachment1
+                weldpos.RigidityEnabled = false
+                weldpos.ReactionForceEnabled = false
+                weldpos.ApplyAtCenterOfMass = false
+                weldpos.MaxForce = 5000
+                weldpos.MaxVelocity = 5000
+                weldpos.Responsiveness = 200
+                local weldrot = Instance.new("AlignOrientation", part0)
+                weldrot.Attachment0 = attachment0
+                weldrot.Attachment1 = attachment1
+                weldrot.ReactionTorqueEnabled = true
+                weldrot.PrimaryAxisOnly = false
+                weldrot.MaxTorque = 1000
+                weldrot.MaxAngularVelocity = 1000
+                weldrot.Responsiveness = 200
+            end
+            
+            local attname = hat.Handle:FindFirstChildOfClass("Attachment").Name
+            
+            if victim.Character:FindFirstChildOfClass("Humanoid").RigType == Enum.HumanoidRigType.R6 then
+                if victim.Character.Torso:FindFirstChild(attname) then
+                    hatc.Handle.AccessoryWeld.Part1 = victim.Character.Torso
+                elseif victim.Character.Head:FindFirstChild(attname) then
+                    hatc.Handle.AccessoryWeld.Part1 = victim.Character.Head
+                end
+            else
+                if victim.Character.UpperTorso:FindFirstChild(attname) then
+                    hatc.Handle.AccessoryWeld.Part1 = victim.Character.UpperTorso
+                elseif victim.Character.Head:FindFirstChild(attname) then
+                    hatc.Handle.AccessoryWeld.Part1 = victim.Character.Head
+                end
+            end
+            
+            bp.Position = hatc.Handle.Position
+            bp.D = 999999999999999
+            bp.P = 999999999999999999999999999999
+            bp.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+            
+            spawn(function()
+                repeat
+                    heartbeat:Wait()
+                    bp.Position = hatc.Handle.Position
+                    hat.Handle.Orientation = hatc.Handle.Orientation
+                until (bp == nil)
+            end)
+            
+            plr.CharacterRemoving:Connect(function()
+                if (bp ~= nil) then
+                    bp = nil
+                end
+            end)
+            
+            plrs.PlayerRemoving:Connect(function(player)
+                if player == victim then
+                    hatc:Destroy()
+                    hat:Destroy()
+                end
+            end)
+            
+            victim.CharacterAdded:Connect(function(chary)
+                repeat wait() until victim.Character:FindFirstChildOfClass("Humanoid")
+                wait()
+                local hum = victim.Character:FindFirstChildOfClass("Humanoid")
+                if hum.RigType == Enum.HumanoidRigType.R6 then
+                    repeat wait() until chary:FindFirstChild("Head")
+                    repeat wait() until chary:FindFirstChild("Torso")
+                else
+                    repeat wait() until chary:FindFirstChild("Head")
+                    repeat wait() until chary:FindFirstChild("UpperTorso")
+                end
+                hatc.Handle.Anchored = false
+                if hum.RigType == Enum.HumanoidRigType.R6 then
+                    if victim.Character.Torso:FindFirstChild(attname) then
+                        hatc.Handle.AccessoryWeld.Part1 = victim.Character.Torso
+                    elseif victim.Character.Head:FindFirstChild(attname) then
+                        hatc.Handle.AccessoryWeld.Part1 = victim.Character.Head
+                    end
+                else
+                    if victim.Character.UpperTorso:FindFirstChild(attname) then
+                        hatc.Handle.AccessoryWeld.Part1 = victim.Character.UpperTorso
+                    elseif victim.Character.Head:FindFirstChild(attname) then
+                        hatc.Handle.AccessoryWeld.Part1 = victim.Character.Head
+                    end
+                end
+            end)
+            
+            victim.Character:FindFirstChildOfClass("Humanoid").Died:Connect(function()
+                hat:Destroy()
+                hatc:Destroy()
+                bp = nil
+            end)
         end)
