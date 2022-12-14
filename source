@@ -58,11 +58,6 @@ end)
         Fly(true)
     end)
 
-    OtherSection:NewButton("", "bird mode", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
-
-        Fly(true)
-    end)
 
         --LOCAL PLAYER
         local Player = Window:NewTab("Player")
