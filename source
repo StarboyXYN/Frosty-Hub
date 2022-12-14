@@ -64,7 +64,7 @@ end)
     local ctrl = {f = 0, b = 0, l = 0, r = 0} 
     local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
     local maxspeed = 50 
-    local speed = 0 
+    local speed = 16 
      
     function Fly() 
     local bg = Instance.new("BodyGyro", torso) 
@@ -123,13 +123,13 @@ end)
     end) 
     mouse.KeyUp:connect(function(key) 
     if key:lower() == "w" then 
-    ctrl.f = 0 
+    ctrl.f = 16 
     elseif key:lower() == "s" then 
-    ctrl.b = 0 
+    ctrl.b = 16 
     elseif key:lower() == "a" then 
-    ctrl.l = 0 
+    ctrl.l = 16 
     elseif key:lower() == "d" then 
-    ctrl.r = 0 
+    ctrl.r = 16 
     end 
     end)
     Fly()
