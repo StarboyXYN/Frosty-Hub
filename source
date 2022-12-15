@@ -80,6 +80,11 @@ end)
         loadstring(game:HttpGet("https://pastebin.com/raw/e5qZM9ns", true))()
     end)
 
+    OtherSection:NewButton("r6 converter", "damn.", function()
+        print("JESUS CHRIST")
+        loadstring(game:HttpGet("https://pastebin.com/raw/E9LkqrVb", true))()
+    end)
+
         --LOCAL PLAYER
         local Player = Window:NewTab("Player")
         local PlayerSection = Player:NewSection("Player")
