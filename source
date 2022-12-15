@@ -83,19 +83,19 @@ end)
         
 
 
-        PlayerSection:NewButton("Hat Giver", "put a hat id in then spawn it", function()
+        PlayerSection:NewButton("Collar", "for people who want to be collared, idk", function()
 --Hat Giver Script
 --//HatName//--
-NameHat = "Meshes/collar30 (2)Accessory" --[[Dark Dex:
+NameHat = "MeshPartAccessory" --[[Dark Dex:
 loadstring(game:HttpGet("https://pastebin.com/raw/LiT0AivK",true))()
 ]]
 --//MeshPart & Texture//--
 MeshID = "rbxassetid://rbxassetid://7039409293" --https://www.roblox.com/games/7496952739
 TextureId = "rbxassetid://rbxassetid://7039409341" --https://www.roblox.com/games/7496952739
 --//3D//--
-Position = PastePositionHere
-Orientation = PasteOrientationHere
-Size = PasteSizeHere
+Position = {0.00020123430294916034, 5.433770179748535, -0.15548647940158844}
+Orientation = {0, 0, 0}
+Size = {1, 1, 1}
 --//Script//--
 if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("Maxgat5") then
     local a = Instance.new("BoolValue")
