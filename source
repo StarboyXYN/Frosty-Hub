@@ -75,9 +75,9 @@ end)
         loadstring(game:HttpGet("https://pastebin.com/raw/1RGPPrMC", true))()
     end)
 
-    OtherSection:NewButton("Test Scythe script", "damn.", function()
+    OtherSection:NewButton("Lost Hope Scythe script", "damn.", function()
         print("JESUS CHRIST")
-        loadstring(game:HttpGet("https://pastebin.com/raw/mv1J6rMH", true))()
+        loadstring(game:HttpGet("https://pastebin.com/raw/e5qZM9ns", true))()
     end)
 
         --LOCAL PLAYER
