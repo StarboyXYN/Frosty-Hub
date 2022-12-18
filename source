@@ -82,7 +82,7 @@ end)
 
     OtherSection:NewButton("r6 converter", "damn.", function()
         print("JESUS CHRIST")
-        loadstring(game:HttpGet("https://pastebin.com/raw/E9LkqrVb", true))()
+        loadstring(game:HttpGet("https://pastebin.com/raw/d3uB90XA", true))()
     end)
 
         --LOCAL PLAYER
@@ -116,10 +116,10 @@ Position = {0.00020123430294916034, 5.433770179748535, -0.15548647940158844}
 Orientation = {0, 0, 0}
 Size = {1, 1, 1}
 --//Script//--
-if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("Maxgat5") then
+if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("FrostScripterr") then
     local a = Instance.new("BoolValue")
     a.Value = true
-    a.Name = "Maxgat5"
+    a.Name = "FrostScripterr"
     a.Parent = game:GetService("Players").LocalPlayer.Character
     getgenv().playerposition = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame.Position + Vector3.new(0,0,0)
 end
