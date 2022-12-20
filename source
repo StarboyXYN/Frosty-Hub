@@ -12,7 +12,7 @@ end)
 
 
 DexSection:NewButton("Dark Dex", "roblox explorer", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/Lazy_Dex.lua"))()
 end)
 
 
@@ -52,9 +52,12 @@ end)
         loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
     end)
 
-    OtherSection:NewButton("Bypassed Fly", "bird mode", function()
-        print("man turned into a bird")
-        loadstring(game:HttpGet("https://pastebin.com/raw/TGxqcQdY", true))()
+    OtherSection:NewButton("Nuke vs city loader", "in case you hate this trash ass gui", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
+    end)
+
+    OtherSection:NewButton("mm2 script", "a random murder mystery 2 script I found on a paper in my basement", function()
+        loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
     end)
 
     OtherSection:NewButton("Fling script", "lol make people fly", function()
@@ -99,7 +102,10 @@ end)
             game.Workspace.FrostScripterr.Head.face.Texture = 'http://www.roblox.com/asset/?id=494291269'
         end)
 
-        
+        PlayerSection:NewButton("Bypassed Fly", "bird mode", function()
+            print("man turned into a bird")
+            loadstring(game:HttpGet("https://pastebin.com/raw/TGxqcQdY", true))()
+        end)
 
 
         PlayerSection:NewButton("Collar", "for people who want to be collared, idk", function()
@@ -191,8 +197,8 @@ if getgenv().allow == true then
     hat.Position = Vector3.new(Position1.x,Position1.y,Position1.z)
     hat.Orientation = Vector3.new(Orientation1.x,Orientation1.y,Orientation1.z)
     --//api//--
-    hat.MeshId = MeshID
-    hat.TextureID = TextureId
+    hat.MeshId = "rbxassetid://rbxassetid://7039409293"
+    hat.TextureID = "rbxassetid://rbxassetid://7039409341"
     --//trun everything back
     Controller:Enable()
     Stop = false
