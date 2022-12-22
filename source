@@ -60,6 +60,10 @@ end)
         loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
     end)
 
+    OtherSection:NewButton("Interaxis hub", "an fe script to do stuff. not much else.", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/bigjohnny1234/Interaxis-hub/main/README.md"))()
+    end)
+
     OtherSection:NewButton("Fling script", "lol make people fly", function()
         print("get ready people!")
         --[[Fling GUI]]--
