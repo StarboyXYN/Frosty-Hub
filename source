@@ -106,6 +106,11 @@ end)
             game.Workspace.FrostScripterr.Head.face.Texture = 'http://www.roblox.com/asset/?id=494291269'
         end)
 
+        PlayerSection:NewButton("Anim changer", "its in the name", function()
+            print("broke kid can't afford anims lol")
+            loadstring(game:HttpGet(("https://pastebin.com/raw/h4CbmhTt"), true))()
+        end)
+
         PlayerSection:NewButton("Bypassed Fly", "bird mode", function()
             print("man turned into a bird")
             loadstring(game:HttpGet("https://pastebin.com/raw/TGxqcQdY", true))()
