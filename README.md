@@ -6,6 +6,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Fr0styScr1pter/Frosty
 
 
 changelog:
+
 dec 12 2022:Script came to the public
 
 dec 13 2022:Bug fixes
