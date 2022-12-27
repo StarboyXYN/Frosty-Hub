@@ -103,7 +103,7 @@ end)
 
                 PlayerSection:NewButton("Super Super happy face", "changes your face to Super Super happy face (CLIENT SIDE)", function()
             print("BROKE BROKE BROKE BROKE!!!")
-            game.Workspace.FrostScripterr.Head.face.Texture = 'http://www.roblox.com/asset/?id=494291269'
+            game.Workspace.FrostScripterr.Head.face.Texture = 'http://www.roblox.com/asset/?id=494290547'
         end)
 
         PlayerSection:NewButton("Anim changer", "its in the name", function()
