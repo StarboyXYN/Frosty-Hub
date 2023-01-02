@@ -101,9 +101,14 @@ end)
             game.Workspace.FrostScripterr.Head.face.Texture = 'http://www.roblox.com/asset/?id=1315942144'
         end)
 
-                PlayerSection:NewButton("Super Super happy face", "changes your face to Super Super happy face (CLIENT SIDE)", function()
+        PlayerSection:NewButton("Super Super happy face", "changes your face to Super Super happy face (CLIENT SIDE)", function()
             print("BROKE BROKE BROKE BROKE!!!")
             game.Workspace.FrostScripterr.Head.face.Texture = 'http://www.roblox.com/asset/?id=494290547'
+        end)
+
+        PlayerSection:NewButton("Hat givers", "yes", function()
+            print("BROKE BROKE BROKE BROKE!!!")
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/ForestIsPro/VisualWorks/main/FreeHats'))()
         end)
 
         PlayerSection:NewButton("Anim changer", "its in the name", function()
