@@ -1,10 +1,12 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Frost Scripter's trolling hub", "Ocean")
+local Window = Library.CreateLib("Fr0sty Hub v13.0 BY frostyy#8150", "Ocean")
 
 --MAIN
 local Main = Window:NewTab("Main")
 local YieldSection = Main:NewSection("Infinite Yield")
 local DexSection = Main:NewSection("Dark Dex")
+local NukevsCity = Main:NewSection("Nuke vs City")
+local Interaxis = Main:NewSection("Interaxis Hub")
 
 YieldSection:NewButton("Infinite Yield", "FE admin script", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
@@ -13,6 +15,14 @@ end)
 
 DexSection:NewButton("Dark Dex", "roblox explorer", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/Lazy_Dex.lua"))()
+end)
+
+NukevsCity:NewButton("Nuke vs city loader", "in case you hate this trash ass gui", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
+end)
+
+Interaxis:NewButton("Interaxis hub", "an fe script to do stuff. not much else.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bigjohnny1234/Interaxis-hub/main/README.md"))()
 end)
 
 
@@ -44,24 +54,13 @@ ScriptSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
 end)
 
 
+
     --Other
     local Other = Window:NewTab("Other")
     local OtherSection = Other:NewSection("Other")
 
     OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
         loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
-    end)
-
-    OtherSection:NewButton("Nuke vs city loader", "in case you hate this trash ass gui", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
-    end)
-
-    OtherSection:NewButton("mm2 script", "a random murder mystery 2 script I found on a paper in my basement", function()
-        loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
-    end)
-
-    OtherSection:NewButton("Interaxis hub", "an fe script to do stuff. not much else.", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/bigjohnny1234/Interaxis-hub/main/README.md"))()
     end)
 
     OtherSection:NewButton("Fling script", "lol make people fly", function()
@@ -72,25 +71,36 @@ end)
         --This link auto updates, so there's no need to update this file.
     end)
 
-    OtherSection:NewButton("Thanatos Scythe script", "damn.", function()
-        print("JESUS CHRIST")
-        loadstring(game:HttpGet("https://pastebin.com/raw/SQCwAU8P", true))()
-    end)
-
-    OtherSection:NewButton("Flame Scythe script", "damn.", function()
-        print("JESUS CHRIST")
-        loadstring(game:HttpGet("https://pastebin.com/raw/1RGPPrMC", true))()
-    end)
-
-    OtherSection:NewButton("Lost Hope Scythe script", "damn.", function()
-        print("JESUS CHRIST")
-        loadstring(game:HttpGet("https://pastebin.com/raw/e5qZM9ns", true))()
-    end)
-
     OtherSection:NewButton("r6 converter", "damn.", function()
         print("JESUS CHRIST")
         loadstring(game:HttpGet("https://pastebin.com/raw/d3uB90XA", true))()
     end)
+
+            
+            local ScytheScripts = Window:NewTab("Scythe Scripts")
+            local Scythe = ScytheScripts:NewSection("Scythe Scripts")
+
+            Scythe:NewButton("Thanatos Scythe script", "damn.", function()
+                print("JESUS CHRIST")
+                loadstring(game:HttpGet("https://pastebin.com/raw/SQCwAU8P", true))()
+            end)
+        
+            Scythe:NewButton("Flame Scythe script", "damn.", function()
+                print("JESUS CHRIST")
+                loadstring(game:HttpGet("https://pastebin.com/raw/1RGPPrMC", true))()
+            end)
+        
+            Scythe:NewButton("Lost Hope Scythe script", "damn.", function()
+                print("JESUS CHRIST")
+                loadstring(game:HttpGet("https://pastebin.com/raw/e5qZM9ns", true))()
+            end)
+
+            local gamescripts = Window:NewTab("Game Scripts")
+            local GS = gamescripts:NewSection("Game Scripts")
+
+            GS:NewButton("mm2 script", "a random murder mystery 2 script I found on a paper in my basement", function()
+                loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
+            end)
 
         --LOCAL PLAYER
         local Player = Window:NewTab("Player")
@@ -106,11 +116,6 @@ end)
             game.Workspace.FrostScripterr.Head.face.Texture = 'http://www.roblox.com/asset/?id=494290547'
         end)
 
-        PlayerSection:NewButton("Hat givers", "yes", function()
-            print("BROKE BROKE BROKE BROKE!!!")
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/ForestIsPro/VisualWorks/main/FreeHats'))()
-        end)
-
         PlayerSection:NewButton("Anim changer", "its in the name", function()
             print("broke kid can't afford anims lol")
             loadstring(game:HttpGet(("https://pastebin.com/raw/h4CbmhTt"), true))()
@@ -121,109 +126,3 @@ end)
             loadstring(game:HttpGet("https://pastebin.com/raw/TGxqcQdY", true))()
         end)
 
-
-        PlayerSection:NewButton("Collar", "for people who want to be collared, idk", function()
---Hat Giver Script
---//HatName//--
-NameHat = "MeshPartAccessory" --[[Dark Dex:
-loadstring(game:HttpGet("https://pastebin.com/raw/LiT0AivK",true))()
-]]
---//MeshPart & Texture//--
-MeshID = "rbxassetid://rbxassetid://7039409293" --https://www.roblox.com/games/7496952739
-TextureId = "rbxassetid://rbxassetid://7039409341" --https://www.roblox.com/games/7496952739
---//3D//--
-Position = {0.00020123430294916034, 5.433770179748535, -0.15548647940158844}
-Orientation = {0, 0, 0}
-Size = {1, 1, 1}
---//Script//--
-if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("FrostScripterr") then
-    local a = Instance.new("BoolValue")
-    a.Value = true
-    a.Name = "FrostScripterr"
-    a.Parent = game:GetService("Players").LocalPlayer.Character
-    getgenv().playerposition = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame.Position + Vector3.new(0,0,0)
-end
-getgenv().allow = true
-if getgenv().allow == true then
-    getgenv().allow = false
-    Stop = true
-    spawn(function()
-        while wait() do
-            if Stop == true then
-                for i, track in pairs(game.Players.LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
-                	track:Stop()
-                end
-            end
-        end
-    end)
-    local Controller = require(game.Players.LocalPlayer:WaitForChild("PlayerScripts"):WaitForChild("PlayerModule")):GetControls()
-    Controller:Disable()
-    local tweenInfo = TweenInfo.new(
-    	0
-    )
-    local t = game.TweenService:Create(game.Players.LocalPlayer.Character.PrimaryPart, tweenInfo, {CFrame = CFrame.new(
-    	0,5,0
-    )})
-    game.Players.LocalPlayer.Character.PrimaryPart.Anchored = true
-    t:Play()
-    wait(1)
-    --//Sheesh//--
-    local Size1 = {x=0,y=0,z=0}
-    local Position1 = {x=0,y=0,z=0}
-    local Orientation1 = {x=0,y=0,z=0}
-    --//3d//--
-    for i,v in pairs(Size) do
-        if i == 1 then
-            Size1.x = v
-        end
-        if i == 2 then
-            Size1.y = v
-        end
-        if i == 3 then
-            Size1.z = v
-        end
-    end
-    for i,v in pairs(Position) do
-        if i == 1 then
-            Position1.x = v
-        end
-        if i == 2 then
-            Position1.y = v
-        end
-        if i == 3 then
-            Position1.z = v
-        end
-    end
-    for i,v in pairs(Orientation) do
-        if i == 1 then
-            Orientation1.x = v
-        end
-        if i == 2 then
-            Orientation1.y = v
-        end
-        if i == 3 then
-            Orientation1.z = v
-        end
-    end
-    local plr = game.Players.LocalPlayer.Character
-    local hat = plr[NameHat].Handle
-    --//3d//--
-    hat.Position = Vector3.new(Position1.x,Position1.y,Position1.z)
-    hat.Orientation = Vector3.new(Orientation1.x,Orientation1.y,Orientation1.z)
-    --//api//--
-    hat.MeshId = "rbxassetid://rbxassetid://7039409293"
-    hat.TextureID = "rbxassetid://rbxassetid://7039409341"
-    --//trun everything back
-    Controller:Enable()
-    Stop = false
-    local tweenInfo1 = TweenInfo.new(
-    	0
-    )
-    local t1 = game.TweenService:Create(game.Players.LocalPlayer.Character.PrimaryPart, tweenInfo1, {CFrame = CFrame.new(
-    	getgenv().playerposition
-    )})
-    t1:Play()
-    game.Players.LocalPlayer.Character.PrimaryPart.Anchored = false
-    getgenv().allow = true
-end
-        end)
