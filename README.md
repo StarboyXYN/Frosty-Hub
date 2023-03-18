@@ -8,10 +8,12 @@ THIS SCRIPT HAS BEEN MADE FOR USER ENJOYMENT AND NOT TO HARRASS ANYONE.
 
 changelog:
 
-dec 12 2022:Script came to the public
+december 12 2022:Script came to the public
 
-dec 13 2022:Bug fixes
+december 13 2022:Bug fixes
 
-dec 14 2022:Added more scripts
+december 14 2022:Added more scripts
 
-jan 25 2023:Cleaned up the UI
+january 25 2023:Cleaned up the UI
+
+march 18 2023:Discontinuing the script and working on a new one
