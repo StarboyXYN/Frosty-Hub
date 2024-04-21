@@ -20,4 +20,4 @@ march 18 2023:Discontinuing the script and working on a new one
 
 july 27 2023:Decided to pick the script up again
 
-april 21 2024:Forgot about this shit snd deciding to archive it due to Byfron
+april 21 2024:Forgot about this shit and deciding to archive it due to Byfron
